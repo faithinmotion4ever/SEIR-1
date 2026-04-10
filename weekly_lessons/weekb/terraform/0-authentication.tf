@@ -5,8 +5,16 @@
 
 #You need to change Project, Region, and Creds
 
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 5.0" 
+    }
+  }
+}
+
 provider "google" {
   project = "thailand-433607"
   region  = "us-central1"
-  credentials = "thailand-433607-6c00ddb70942.json"
 }
